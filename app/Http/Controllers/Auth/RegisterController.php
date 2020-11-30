@@ -48,7 +48,7 @@ class RegisterController extends Controller
      */
     public function registerProvider()
     {
-        $userType = typeUsers::all()->where('id', '=', 1);
+        $userType = typeUsers::all()->where('id', '=', 3);
         return view('auth.registerProvider', compact('userType'));
     }
 
@@ -76,9 +76,9 @@ class RegisterController extends Controller
     protected function create(array $data)
     {
         if ($data['type_user'] == 1){
-            $status = 2;
+            $status = 3;
         }else{
-            $status = 1;
+            $status = 3;
         }
 
         $insertField =  User::create([
