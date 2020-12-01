@@ -48,7 +48,7 @@ class RegisterController extends Controller
      */
     public function registerProvider()
     {
-        $userType = typeUsers::all()->where('id', '=', 3);
+        $userType = typeUsers::all()->where('id', '=', 1);
         return view('auth.registerProvider', compact('userType'));
     }
 
