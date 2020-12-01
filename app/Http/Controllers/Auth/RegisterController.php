@@ -76,9 +76,9 @@ class RegisterController extends Controller
     protected function create(array $data)
     {
         if ($data['type_user'] == 1){
-            $status = 3;
+            $status = 2;
         }else{
-            $status = 3;
+            $status = 1;
         }
 
         $insertField =  User::create([
